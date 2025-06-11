@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lenakach <lenakach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/03 12:23:24 by lenakach          #+#    #+#             */
-/*   Updated: 2025/06/03 12:24:58 by lenakach         ###   ########.fr       */
+/*   Created: 2025/06/09 10:15:29 by lenakach          #+#    #+#             */
+/*   Updated: 2025/06/09 10:17:10 by lenakach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	ft_swap(int *a, int *b)
 {
 	int	tmp;
+
 	tmp = *a;
 	*a = *b;
 	*b = tmp;
@@ -22,11 +23,11 @@ void	ft_swap(int *a, int *b)
 
 int	main(void)
 {
-	int	a = 20;
-	int	b = 6;
+	int	a = 23;
+	int	b = 2;
 
-	printf("Mon a : %d, Mon b : %d" ,a, b);
+	printf("Mon a : %d et mon b %d", a, b);
 	ft_swap(&a, &b);
-	printf("Mon a : %d, Mon b : %d" ,a, b);
+	printf("Mon a : %d et mon b %d", a, b);
 	return (0);
 }

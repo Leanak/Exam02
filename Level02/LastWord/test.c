@@ -5,35 +5,35 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lenakach <lenakach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/04 16:50:36 by lenakach          #+#    #+#             */
-/*   Updated: 2025/06/04 16:50:39 by lenakach         ###   ########.fr       */
+/*   Created: 2025/06/09 12:30:36 by lenakach          #+#    #+#             */
+/*   Updated: 2025/06/09 12:42:30 by lenakach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int main (int ac, char **a)
+int	main(int ac, char **av)
 {
+	int	i;
+	int	index;
+
 	if (ac == 2)
 	{
-		int i = 0;
-
-		// getting to the end of the string
-		while (a[1][i])
+		i = 0;
+		index = 0;
+		while (av[1][i])
 			i++;
 		i--;
-		// looping over the whole string backwards
-		// until we found a space
-		while (a[1][i] > 32)
+		while ((av[1][i] == 32 || av[1][i] == 9) && (i > 0))
 			i--;
-		i++;
-		// getting back to the end and writing the last word to
-		// the screen
-		while (a[1][i])
+		index = i;
+		while ((av[1][i] != 32 && av[1][i] != 9) && (i > 0))
+			i--;
+		while (i <= index)
 		{
-			write(1, &a[1][i], 1);
+			write(1, &av[1][i], 1);
 			i++;
 		}
 	}
-	write (1, "\n", 1);
+	write(1, "\n", 1);
 }

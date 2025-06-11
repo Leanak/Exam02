@@ -5,32 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lenakach <lenakach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/03 12:16:21 by lenakach          #+#    #+#             */
-/*   Updated: 2025/06/03 12:20:45 by lenakach         ###   ########.fr       */
+/*   Created: 2025/06/09 10:09:27 by lenakach          #+#    #+#             */
+/*   Updated: 2025/06/09 10:13:14 by lenakach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strcpy(char *s1, char *s2)
 {
-	char	*start;
-	start = dest;
-	while (*src)
-		*dest++ = *src++;
-	printf("Ma chaine dans la ft : %s\n", start);
-	return (start);
-}
+	char	*res;
 
+	res = s2;
+	while (*s1)
+		*s2++ = *s1++;
+	return (res);
+}
 
 int	main(void)
 {
-	char	*s1 = "Hey";
-	char	s2[100];
+	char	*s1 = "Hello Caaaaa salut";
+	char	s2[] = "HHeyyyyy";
 
-	printf("Ma chaine avant : %s\n", s2);
-	printf("Le retour de ma ft %s\n", ft_strcpy(s2, s1));
-	printf("La fonction apres dans mon main %s\n", s2);
+	printf("Ma s1 avant : %s", s1);
+	printf("Ma s2 avant : %s", s2);
+	printf("Ma s2 apres %s", ft_strcpy(s1, s2));
 	return (0);
 }
-	

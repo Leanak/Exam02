@@ -6,13 +6,12 @@
 /*   By: lenakach <lenakach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 14:33:48 by lenakach          #+#    #+#             */
-/*   Updated: 2025/06/03 15:35:04 by lenakach         ###   ########.fr       */
+/*   Updated: 2025/06/09 11:08:50 by lenakach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
-
 
 int	main(int ac, char **av)
 {

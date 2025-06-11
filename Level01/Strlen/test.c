@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lenakach <lenakach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/03 12:21:20 by lenakach          #+#    #+#             */
-/*   Updated: 2025/06/03 12:22:48 by lenakach         ###   ########.fr       */
+/*   Created: 2025/06/09 10:13:38 by lenakach          #+#    #+#             */
+/*   Updated: 2025/06/09 10:14:43 by lenakach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int	ft_strlen(char *str)
 
 int	main(int ac, char **av)
 {
+	(void) ac;
+
 	if (ac == 2)
 		printf("%d", ft_strlen(av[1]));
 	return (0);

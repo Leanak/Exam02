@@ -5,25 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lenakach <lenakach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/03 12:53:52 by lenakach          #+#    #+#             */
-/*   Updated: 2025/06/03 12:58:22 by lenakach         ###   ########.fr       */
+/*   Created: 2025/06/09 10:21:24 by lenakach          #+#    #+#             */
+/*   Updated: 2025/06/09 10:22:46 by lenakach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 int	main(int ac, char **av)
 {
-	char	*start;
+	int	i;
 
 	if (ac == 2)
 	{
-		start = av[1];
-		while (*av[1])
-			av[1]++;
-		while (av[1] >= start)
-			write(1, av[1]--, 1);
-		write(1, "\n", 1);
+		i = 0;
+		while (av[1][i])
+			i++;
+		while (i-- >= 0)
+			write(1, &av[1][i], 1);
 	}
+	write(1, "\n", 1);
+	return (0);
 }
